@@ -1,0 +1,40 @@
+@use 'src/variables' as v;
+@use 'src/mixins' as m;
+
+.start-screen {
+    @include m.full-size;
+    @include m.d-flex(column, center, center);
+    background-color: v.$c1;
+
+    //filter: drop-shadow(29px 11px 21px #000) contrast(120%) hue-rotate(340deg) saturate(120%);
+    img {
+        //height: 100vh;
+        background-color: transparent;
+        object-fit: cover;
+
+        border-radius: 20px;
+        filter: drop-shadow(29px 11px 21px #000) contrast(120%) hue-rotate(340deg) saturate(120%);
+    }
+
+    
+    .frame-start-screen {
+        height: 60%;
+        width: 80%;
+        background-image: url('../../assets/img/startScreenCardGame.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        filter: drop-shadow(29px 18px 30px #000) contrast(120%) hue-rotate(340deg) saturate(120%);
+        @include m.d-flex(column, space-evenly, center);
+
+        p {
+            color: v.$c2;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 5px 5px 10px rgba(224, 72, 22, 1);
+        }
+    }
+
+
+}

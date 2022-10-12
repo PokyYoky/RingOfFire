@@ -1,0 +1,11 @@
+@use 'src/variables' as v;
+@use 'src/mixins' as m;
+
+.button {
+    padding: 0 10px;
+    @include m.d-flex(row, center, center);
+    border-radius: 10px;
+    background-color: blue;
+    min-width: 20px;
+    min-height: 10px;
+}
