@@ -1,0 +1,21 @@
+@use 'src/variables' as v;
+@use 'src/mixins' as m;
+
+.field {
+    @include m.full-size;
+    @include m.d-flex(column, center, center);
+
+    background-image: url('../../assets/img/ringOfFire.jpg');
+    background-size: cover;
+    background-position: center;
+
+    .card-stack {
+        position: relative;
+        filter: brightness(1.8) drop-shadow(29px 11px 10px #000);
+
+        img {
+            position: absolute;
+            width: 160px;
+        }
+    }
+}
