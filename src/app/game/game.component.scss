@@ -31,6 +31,21 @@
 }
 
 .pick-card {
-    transition: all 125ms ease-in-out;
-    transform: scale(1.5) !important;
+    // transition: all 125ms ease-in-out;
+    // transform: scale(1.5) !important;
+    animation: onPickCard 1s forwards;
+}
+
+@keyframes onPickCard {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+ 
+    100% {
+        transform: scale(1.8) translate(-50px, -20px) rotate(-8deg);
+    }
 }
