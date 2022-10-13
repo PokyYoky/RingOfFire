@@ -8,6 +8,7 @@
     background-image: url('../../assets/img/ringOfFire.jpg');
     background-size: cover;
     background-position: center;
+    filter: brightness(0.7);
 
     .card-stack {
         position: relative;
@@ -18,4 +19,18 @@
             width: 160px;
         }
     }
+}
+
+.top-card {
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.2) translate(-20px, -10px);
+    }
+}
+
+.pick-card {
+    transition: all 125ms ease-in-out;
+    transform: scale(1.5) !important;
 }
