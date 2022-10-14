@@ -3,5 +3,6 @@
         <img *ngFor="let c of [0, 1, 2, 3]; let i = index;" [ngStyle]="{'right.px': i * 15}" src="../../assets/img/cards/card_cover.png" alt="card">
         <img (click)="takeCard()" style="right: 75px" src="../../assets/img/cards/card_cover.png" alt="card">
         <img *ngIf="animationOnTakeCard" class="top-card" [class.pick-card]="animationOnTakeCard" (click)="takeCard()" style="right: 75px" src="{{ cardImage }}" alt="card">
+        <img *ngFor="let c of game?.playedCards; let i = index;" [ngStyle]="{'right.px': i * 15}" src="../../assets/img/cards/{{ currentCard }}.png" alt="played card" class="played-card">
     </div>
 </div>

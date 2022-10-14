@@ -30,6 +30,7 @@ export class GameComponent implements OnInit {
       this.currentCard = this.game?.stack.pop();
       this.animationOnTakeCard = true;
       this.cardImage = '../../assets/img/cards/' + this.currentCard + '.png'; //'../../assets/img/cards/ace_1.png';
+      this.game?.playedCards.push(this.currentCard + '');
       //console.log(this.game?.stack);
     
       setTimeout(()=> {
