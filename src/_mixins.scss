@@ -21,9 +21,9 @@
     align-items: $align;
 }
 
-@mixin menu-background {
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.3);
+@mixin bground {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: -3px 3px 20px rgba(0, 0, 0, 0.8);
 }
 

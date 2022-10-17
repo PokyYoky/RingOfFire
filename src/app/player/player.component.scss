@@ -1,0 +1,28 @@
+@use 'src/variables' as v;
+@use 'src/mixins' as m;
+
+.player {
+    @include m.d-flex(row, center, center);
+
+    cursor: pointer;
+
+    span {
+        padding-left: 16px;
+        color: white;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 100%;
+
+        &.male {
+            background-color: rgb(207, 236, 252);
+        }
+
+        &.female {
+            background-color: rgb(252, 207, 207);
+        }
+    }
+}

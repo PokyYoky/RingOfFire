@@ -20,7 +20,7 @@
         }
 
         img.played-card {
-            
+            animation: onPickCard 1s forwards;
         }
     }
 }
@@ -39,6 +39,24 @@
     // transform: scale(1.5) !important;
     //transform: scale(1.2);
     animation: onPickCard 1s forwards;
+}
+
+.player-space {
+    @include m.bground;
+
+    position: absolute;
+    top: 160px;
+    right: 0;
+    z-index: 10;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: white;
+    padding: 16px;
+    border-radius: 80px 0 0 80px;
+
+    &:hover {
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+    }
 }
 
 @keyframes onPickCard {

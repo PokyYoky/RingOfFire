@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 import { ButtonComponent } from './button/button.component';
 import { GameComponent } from './game/game.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartScreenComponent,
     ButtonComponent,
-    GameComponent
+    GameComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
