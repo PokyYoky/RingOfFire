@@ -62,7 +62,7 @@
 }
 
 .current-player {
-    @include m.b-shadow;
+    @include m.b-shadow(0.6);
 }
 
 @keyframes onPickCard {

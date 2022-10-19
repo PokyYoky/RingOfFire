@@ -11,12 +11,8 @@ export class PlayerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    //todo: next step
-    this.isCurrentPlayer = //Array.indexOf(this.game?.players) this.game?.currentPlayer;
   }
 
   @Input() name: string = '';
   @Input() isMale: boolean = false;
-  @Input() isCurrentPlayer: boolean = false; 
-
 }

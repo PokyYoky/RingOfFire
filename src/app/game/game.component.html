@@ -6,7 +6,7 @@
         <img *ngFor="let card of game?.playedCards; let i = index;" style="right: 75px" src="../../assets/img/cards/{{ card }}.png" alt="played card" class="played-card">
     </div>
 </div>
-<app-player *ngFor="let player of game?.players; let i = index" class="player-space" [ngStyle]="{'top.px': 80 + (i * 100)}" [name]="player.name" [isMale]="player.male"></app-player>
+<app-player *ngFor="let player of game?.players; let i = index" class="player-space" [ngStyle]="{'top.px': 80 + (i * 100)}" [name]="player.name" [isMale]="player.male" [class.current-player]="game?.currentPlayer == i"></app-player>
 
 <button mat-fab color="primary" class="btn-add-player" (click)="openDialog()" title="add new player">
     <mat-icon>person_add</mat-icon>
