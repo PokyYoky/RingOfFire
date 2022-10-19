@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add new player</h1>
+<div mat-dialog-content>
+    <p>Please enter the name of a player</p>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="name">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>male / female</mat-label>
+        <mat-select [(ngModel)]="selectedValue">
+            <mat-option value="1">
+                male
+            </mat-option>
+            <mat-option value="0">
+                female
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="[name, selectedValue]" cdkFocusInitial>Ok</button>
+</div>

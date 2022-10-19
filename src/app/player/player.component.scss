@@ -12,17 +12,16 @@
     }
 
     img {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
         object-fit: cover;
         border-radius: 100%;
+        background-color: rgb(252, 207, 207);
+        content: url("/assets/img/player_female2.png");
 
         &.male {
             background-color: rgb(207, 236, 252);
-        }
-
-        &.female {
-            background-color: rgb(252, 207, 207);
+            content: url("/assets/img/player_male2.png");
         }
     }
 }

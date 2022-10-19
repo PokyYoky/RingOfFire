@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models/game';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { Player } from 'src/models/IPlayer';
 
 @Component({
   selector: 'app-game',
@@ -13,7 +16,7 @@ export class GameComponent implements OnInit {
   cardImage: string = '../../assets/img/cards/card_cover.png';
   currentCard: string | undefined;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.newGame();
@@ -25,7 +28,6 @@ export class GameComponent implements OnInit {
   }
 
   takeCard() {
-
     if (!this.animationOnTakeCard) {
       this.currentCard = this.game?.stack.pop();
       this.animationOnTakeCard = true;
@@ -39,6 +41,15 @@ export class GameComponent implements OnInit {
       }, 1500);
       
     }
-    
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogAddPlayerComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      let player: Player = {name: result[0] + '', male: (result[1] == 1)};
+      this.game?.players.push(player);
+      console.log(this.game?.players);
+    });
   }
 }

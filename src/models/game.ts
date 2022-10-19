@@ -1,5 +1,7 @@
+import { Player } from './IPlayer';
+
 export class Game {
-    public players: string[] = ['Jim', 'Johnny', 'Fred'];
+    public players: Player[] = [];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;

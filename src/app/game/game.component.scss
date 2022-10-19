@@ -35,9 +35,6 @@
 }
 
 .pick-card {
-    // transition: all 125ms ease-in-out;
-    // transform: scale(1.5) !important;
-    //transform: scale(1.2);
     animation: onPickCard 1s forwards;
 }
 
@@ -54,8 +51,18 @@
     border-radius: 80px 0 0 80px;
 
     &:hover {
-        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+        @include m.b-shadow;
     }
+}
+
+.btn-add-player {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+.current-player {
+    @include m.b-shadow;
 }
 
 @keyframes onPickCard {

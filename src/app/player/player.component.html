@@ -1,4 +1,4 @@
 <div class="player">
-    <img class="male" src="/assets/img/player_male2.png" alt="Player 1">
+    <img [class.male]="isMale" [class.current-player]="isCurrentPlayer" alt="player">
     <span>{{ name }}</span>
 </div>
