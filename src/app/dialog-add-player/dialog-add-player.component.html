@@ -19,5 +19,5 @@
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onCancel()">No Thanks</button>
-    <button mat-button [mat-dialog-close]="[name, selectedValue]" cdkFocusInitial>Ok</button>
+    <button mat-button [disabled]="name.length == 0" [mat-dialog-close]="[name, selectedValue]" cdkFocusInitial>Ok</button>
 </div>
