@@ -33,13 +33,16 @@ export class GameComponent implements OnInit {
       this.animationOnTakeCard = true;
       this.cardImage = '../../assets/img/cards/' + this.currentCard + '.png'; //'../../assets/img/cards/ace_1.png';
       this.game?.playedCards.push(this.currentCard + '');
-      // console.log(this.game?.stack);
-      // console.log(this.game?.playedCards);
     
       setTimeout(()=> {
         this.animationOnTakeCard = false;
       }, 1500);
-      
+
+      if (this.game) {
+        //todo: alle console.log entfernen
+        this.game.currentPlayer++;
+        this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+     } 
     }
   }
 

@@ -8,6 +8,8 @@
 </div>
 <app-player *ngFor="let player of game?.players; let i = index" class="player-space" [ngStyle]="{'top.px': 80 + (i * 100)}" [name]="player.name" [isMale]="player.male" [class.current-player]="game?.currentPlayer == i"></app-player>
 
+<app-game-info class="pin-bottom" [card]="currentCard"></app-game-info>
+
 <button mat-fab color="primary" class="btn-add-player" (click)="openDialog()" title="add new player">
     <mat-icon>person_add</mat-icon>
 </button>
