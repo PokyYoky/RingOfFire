@@ -1,9 +1,9 @@
 <div class="field">
     <div class="card-stack">
-        <img *ngFor="let c of [0, 1, 2, 3]; let i = index;" [ngStyle]="{'right.px': i * 15}" src="../../assets/img/cards/card_cover.png" alt="card">
-        <img (click)="takeCard()" style="right: 75px" src="../../assets/img/cards/card_cover.png" alt="card">
+        <img *ngFor="let c of [0, 1, 2, 3]; let i = index;" [ngStyle]="{'right.px': i * 15}" src="./assets/img/cards/card_cover.png" alt="card">
+        <img (click)="takeCard()" style="right: 75px" src="./assets/img/cards/card_cover.png" alt="card">
         <img *ngIf="animationOnTakeCard" class="top-card" [class.pick-card]="animationOnTakeCard" (click)="takeCard()" style="right: 75px" src="{{ cardImage }}" alt="card">
-        <img *ngFor="let card of game?.playedCards; let i = index;" style="right: 75px" src="../../assets/img/cards/{{ card }}.png" alt="played card" class="played-card">
+        <img *ngFor="let card of game?.playedCards; let i = index;" style="right: 75px" src="./assets/img/cards/{{ card }}.png" alt="played card" class="played-card">
     </div>
 </div>
 <app-player *ngFor="let player of game?.players; let i = index" class="player-space" [ngStyle]="{'top.px': 80 + (i * 100)}" [name]="player.name" [isMale]="player.male" [class.current-player]="game?.currentPlayer == i"></app-player>
