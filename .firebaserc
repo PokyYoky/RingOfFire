@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ringoffire-ak": {
+      "hosting": {
+        "RingOfFire": [
+          "ringoffire-ak"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ringoffire-ak"
+  }
+}
